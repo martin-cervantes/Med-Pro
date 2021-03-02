@@ -13,3 +13,12 @@
  *= require_tree .
  *= require_self
  */
+
+.title {
+  font-weight: 900;
+  font-size: 2rem;
+}
+
+.title:hover {
+  text-decoration: underline;
+}
