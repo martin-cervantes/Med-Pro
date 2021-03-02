@@ -1,4 +1,13 @@
 Rails.application.routes.draw do
   root 'homepage#index'
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+
+  namespace :api do
+    get 'doctors/index'
+    post 'doctors/create'
+    get '/show/:id', to: 'doctors#show'
+    put '/update/:id', to: 'doctors#update'
+    delete '/destroy/:id', to: 'doctors#destroy'
+  end
+
+  get '/*path' => 'homepage#index'
 end
