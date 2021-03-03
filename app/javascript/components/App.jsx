@@ -15,7 +15,7 @@ const App = props => (
       <Route path="/" exact component={Home} />
       <Route path="/doctors" exact component={Doctors} />
       <Route path="/doctor/:id" exact component={Doctor} />
-      <Route path="/doctor" exact component={NewDoctor} />
+      <Route path="/new_doctor" exact component={NewDoctor} />
       <Route path="/doctor/:id/edit" exact component={EditDoctor} />
     </Switch>
     <Footer />

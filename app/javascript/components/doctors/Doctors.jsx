@@ -62,9 +62,9 @@ class Doctors extends React.Component {
                 <td>{doctor.first_name}</td>
                 <td>{doctor.last_name}</td>
                 <td>{doctor.email}</td>
-                <td><Link type="button" className="btn btn-outline-primary" to={`/doctor/${doctor.id}`}>Show <i class="fas fa-user"></i></Link></td>
+                <td><Link type="button" className="btn btn-outline-primary" to={`/doctor/${doctor.id}`}>Show <i className="fas fa-user"></i></Link></td>
                 <td><Link type="button" className="btn btn-outline-secondary" to="/">Edit <i className="fas fa-edit"></i></Link></td>
-                <td><Link type="button" className="btn btn-outline-danger" onClick={() => this.deleteDoctor(doctor.id)}>Delete <i className="fas fa-trash-alt"></i></Link></td>
+                <td><button type="button" className="btn btn-outline-danger" onClick={() => this.deleteDoctor(doctor.id)}>Delete <i className="fas fa-trash-alt"></i></button></td>
               </tr>
           ))}
         </tbody>
@@ -89,7 +89,7 @@ class Doctors extends React.Component {
         <div className="py-5">
           <main className="container">
             <div className="text-right mb-3">
-              <Link to="/doctor" className="btn btn-secondary">
+              <Link to="/new_doctor" className="btn btn-secondary">
                 New Doctor
               </Link>
             </div>
