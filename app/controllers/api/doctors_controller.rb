@@ -31,7 +31,6 @@ class Api::DoctorsController < ApplicationController
   end
 
   def destroy
-    byebug
     doctor&.destroy
     render json: { message: 'Doctor deleted!' }
   end
@@ -43,6 +42,6 @@ class Api::DoctorsController < ApplicationController
   end
 
   def doctor_params
-    params.permit(:name, :image, :ingredients, :instruction)
+    params.permit(:fist_name, :last_name, :email, :medical_speciality, :username, :password)
   end
 end
