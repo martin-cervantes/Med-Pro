@@ -1,14 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import doctors from '../../assets/images/doctor.png';
+import patients from '../../assets/images/patient.png';
+import appointments from '../../assets/images/appointment.png';
 
 const Home = () => (
-  <div>
-    <h1 className="display-4 text-center">Med-Pro</h1>
-    <div className="d-flex flex-row justify-content-around">
+  <section>
+    <div className="d-flex flex-md-row flex-column justify-content-around">
       <Link
         to="/doctors"
-        className="d-flex flex-column btn btn-light"
+        className="cards d-flex flex-column justify-content-between btn btn-light border border-secondary my-5 mx-md-0 mx-auto"
         role="button"
       >
         <img src={doctors} alt="Doctors" title="Doctors" />
@@ -17,23 +18,23 @@ const Home = () => (
 
       <Link
         to="/doctors"
-        className="d-flex flex-column btn btn-light"
+        className="cards d-flex flex-column justify-content-between btn btn-light border border-secondary my-5 mx-md-0 mx-auto"
         role="button"
       >
-        <img src={doctors} alt="Doctors" title="Doctors" />
-        <span className="title">Doctors</span>
+        <img src={patients} alt="Patients" title="Patients" />
+        <span className="title">Patients</span>
       </Link>
 
       <Link
         to="/doctors"
-        className="d-flex flex-column btn btn-light"
+        className="cards d-flex flex-column justify-content-between btn btn-light border border-secondary my-5 mx-md-0 mx-auto"
         role="button"
       >
-        <img src={doctors} alt="Doctors" title="Doctors" />
-        <span className="title">Doctors</span>
+        <img src={appointments} alt="Appointments" title="Appointments" />
+        <span className="title">Appointments</span>
       </Link>
     </div>
-  </div>
+  </section>
 );
 
 export default Home;

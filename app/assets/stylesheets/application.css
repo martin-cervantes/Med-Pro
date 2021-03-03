@@ -14,6 +14,28 @@
  *= require_self
  */
 
+header {
+  background-color: #fff;
+  border-bottom: 1px solid #eee;
+  box-shadow: 0 0 13px #00000054;
+  position: sticky;
+  top: 0;
+}
+
+section {
+  min-height: calc(100vh - 11.2rem);
+}
+
+.cards {
+  max-height: 20rem;
+  max-width: 20rem;
+}
+
+#title {
+  height: 4rem;
+  margin: 0 2rem;
+}
+
 .title {
   font-weight: 900;
   font-size: 2rem;
@@ -21,4 +43,9 @@
 
 .title:hover {
   text-decoration: underline;
+}
+
+#copyleft {
+  display: inline-block;
+  transform: rotate(180deg);
 }

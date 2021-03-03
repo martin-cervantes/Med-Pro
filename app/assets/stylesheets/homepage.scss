@@ -1,3 +1,30 @@
 // Place all the styles related to the Homepage controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+.l {
+  color: #1a76d1;
+  padding: 20px 0;
+  margin: 0 20px;
+  display: inline-block;
+  position: relative;
+  opacity: 0.75;
+}
+
+.l:hover {
+  opacity: 1;
+}
+
+.l::before {
+  transition: 300ms;
+  height: 5px;
+  content: "";
+  position: absolute;
+  background-color: #1a76d1;
+  width: 0%;
+  bottom: -10px;
+}
+
+.l:hover::before {
+  width: 100%;
+}
