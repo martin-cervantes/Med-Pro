@@ -96,6 +96,33 @@ class NewDoctor extends React.Component {
               </div>
 
               <div className="form-group">
+                <label htmlFor="medical_speciality">Medical Speciality</label>
+                <select className="form-control" id="medical_speciality">
+                  <option value="Cardiothoracic surgery">Cardiothoracic surgery</option>
+                  <option value="Dermatology">Dermatology</option>
+                  <option value="Endocrinology">Endocrinology</option>
+                  <option value="Forensic">Forensic</option>
+                  <option value="Gastroenterology">Gastroenterology</option>
+                  <option value="General surgery">General surgery</option>
+                  <option value="Geriatrics">Geriatrics</option>
+                  <option value="Gynecology">Gynecology</option>
+                  <option value="Hematology">Hematology</option>
+                  <option value="Neonatology">Neonatology</option>
+                  <option value="Neurosurgery">Neurosurgery</option>
+                  <option value="Obstetrics">Obstetrics</option>
+                  <option value="Ophthalmology">Ophthalmology</option>
+                  <option value="Orthopedic">Orthopedic</option>
+                  <option value="Pediatrics">Pediatrics</option>
+                  <option value="Physical Medicine">Physical Medicine</option>
+                  <option value="Plastic surgery">Plastic surgery</option>
+                  <option value="Psychiatry">Psychiatry</option>
+                  <option value="Radiology">Radiology</option>
+                  <option value="Trauma surgery">Trauma surgery</option>
+                  <option value="Urology">Urology</option>
+                </select>
+              </div>
+
+              <div className="form-group">
                 <label htmlFor="email">Email</label>
                 <input
                   type="email"
