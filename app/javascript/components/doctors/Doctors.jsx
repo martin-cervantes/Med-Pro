@@ -22,6 +22,27 @@ class Doctors extends React.Component {
         .catch(() => this.props.history.push("/"));
   }
 
+  deleteDoctor(id) {
+    const url = `/api/destroy/${id}`;
+    const token = document.querySelector('meta[name="csrf-token"]').content;
+
+    fetch(url, {
+      method: "DELETE",
+      headers: {
+        "X-CSRF-Token": token,
+        "Content-Type": "application/json"
+      }
+    })
+      .then(response => {
+        if (response.ok) {
+          return response.json();
+        }
+        throw new Error("Network response was not ok.");
+      })
+      .then(() => this.props.history.push("/"))
+      .catch(error => console.log(error.message));
+  }
+
   render() {
     const { doctors } = this.state;
     const allDoctors = (<table className="table table-striped">
@@ -43,7 +64,7 @@ class Doctors extends React.Component {
                 <td>{doctor.email}</td>
                 <td><Link type="button" className="btn btn-outline-primary" to={`/doctor/${doctor.id}`}>Show <i class="fas fa-user"></i></Link></td>
                 <td><Link type="button" className="btn btn-outline-secondary" to="/">Edit <i className="fas fa-edit"></i></Link></td>
-                <td><Link type="button" className="btn btn-outline-danger" to="/">Delete <i className="fas fa-trash-alt"></i></Link></td>
+                <td><Link type="button" className="btn btn-outline-danger" onClick={() => this.deleteDoctor(doctor.id)}>Delete <i className="fas fa-trash-alt"></i></Link></td>
               </tr>
           ))}
         </tbody>
