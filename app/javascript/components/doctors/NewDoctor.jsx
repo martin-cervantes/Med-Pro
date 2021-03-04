@@ -8,7 +8,7 @@ class NewDoctor extends React.Component {
       first_name: "",
       last_name: "",
       email: "",
-      medical_speciality: "",
+      medical_speciality: "Cardiothoracic surgery",
       username: "",
       password: "",
       confirm_password: ""
@@ -97,7 +97,12 @@ class NewDoctor extends React.Component {
 
               <div className="form-group">
                 <label htmlFor="medical_speciality">Medical Speciality</label>
-                <select className="form-control" id="medical_speciality">
+                <select
+                  className="form-control"
+                  name="medical_speciality"
+                  id="medical_speciality"
+                  onChange={this.onChange}
+                >
                   <option value="Cardiothoracic surgery">Cardiothoracic surgery</option>
                   <option value="Dermatology">Dermatology</option>
                   <option value="Endocrinology">Endocrinology</option>
