@@ -32,15 +32,29 @@ class NewDoctor extends React.Component {
   onSubmit(event) {
     event.preventDefault();
     const url = "/api/doctors/create";
-    const { name, ingredients, instruction } = this.state;
+    const {
+      first_name,
+      last_name,
+      email,
+      medical_speciality,
+      username,
+      password,
+      confirm_password,
+    } = this.state;
 
-    if (name.length == 0 || ingredients.length == 0 || instruction.length == 0)
+    if (first_name.length == 0 || last_name.length == 0 || email.length == 0 || username.length == 0 || password.length == 0 || confirm_password.length == 0)
+      return;
+
+    if (password !== confirm_password)
       return;
 
     const body = {
-      name,
-      ingredients,
-      instruction: instruction.replace(/\n/g, "<br> <br>")
+      first_name,
+      last_name,
+      email,
+      medical_speciality,
+      username,
+      password,
     };
 
     const token = document.querySelector('meta[name="csrf-token"]').content;
@@ -56,7 +70,7 @@ class NewDoctor extends React.Component {
         if (response.ok) {
           return response.json();
         }
-        throw new Error("Network response was not ok.");
+        console.log(response);
       })
       .then(response => this.props.history.push(`/doctor/${response.id}`))
       .catch(error => console.log(error.message));
