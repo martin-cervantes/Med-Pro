@@ -73,7 +73,7 @@ class NewDoctor extends React.Component {
         throw new Error("Network response was not ok.");
       })
       .then(response => this.props.history.push(`/doctor/${response.id}`))
-      .catch(error => console.log(error.message));
+      .catch(() => this.props.history.push("/"));
   }
 
   render() {
