@@ -70,7 +70,7 @@ class NewDoctor extends React.Component {
         if (response.ok) {
           return response.json();
         }
-        console.log(response);
+        throw new Error("Network response was not ok.");
       })
       .then(response => this.props.history.push(`/doctor/${response.id}`))
       .catch(error => console.log(error.message));
