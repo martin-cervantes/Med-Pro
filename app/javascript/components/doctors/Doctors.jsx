@@ -63,7 +63,7 @@ class Doctors extends React.Component {
                 <td>{doctor.last_name}</td>
                 <td>{doctor.email}</td>
                 <td><Link type="button" className="btn btn-outline-primary" to={`/doctor/${doctor.id}`}>Show <i className="fas fa-user"></i></Link></td>
-                <td><Link type="button" className="btn btn-outline-secondary" to="/">Edit <i className="fas fa-edit"></i></Link></td>
+                <td><Link type="button" className="btn btn-outline-secondary" to={`/doctor/${doctor.id}/edit`}>Edit <i className="fas fa-edit"></i></Link></td>
                 <td><button type="button" className="btn btn-outline-danger" onClick={() => this.deleteDoctor(doctor.id)}>Delete <i className="fas fa-trash-alt"></i></button></td>
               </tr>
           ))}
