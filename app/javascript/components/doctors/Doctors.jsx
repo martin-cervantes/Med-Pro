@@ -40,7 +40,7 @@ class Doctors extends React.Component {
         throw new Error("Network response was not ok.");
       })
       .then(() => this.props.history.push("/"))
-      .catch(error => console.log(error.message));
+      .catch(() => this.props.history.push("/"));
   }
 
   render() {
