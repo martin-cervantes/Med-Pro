@@ -42,3 +42,43 @@ d.email = "pburke@hotcakes.com"
 d.username = "pburke"
 d.password = 123456
 d.save
+
+p = Patient.new
+p.first_name = "Denny"
+p.last_name = "Duquette"
+p.email = "dduquette@hotcakes.com"
+p.username = "dduquette"
+p.password = "123456"
+p.save
+
+p = Patient.new
+p.first_name = "Mary"
+p.last_name = "Portman"
+p.email = "mportman@hotcakes.com"
+p.username = "mportman"
+p.password = "123456"
+p.save
+
+p = Patient.new
+p.first_name = "Henry"
+p.last_name = "Burton"
+p.email = "hburton@hotcakes.com"
+p.username = "hburton"
+p.password = "123456"
+p.save
+
+p = Patient.new
+p.first_name = "Nick"
+p.last_name = "Marsh"
+p.email = "nmarsh@hotcakes.com"
+p.username = "nmarsh"
+p.password = "123456"
+p.save
+
+p = Patient.new
+p.first_name = "Zola"
+p.last_name = "Shepherd"
+p.email = "zshepherd@hotcakes.com"
+p.username = "zshepherd"
+p.password = "123456"
+p.save
