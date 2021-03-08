@@ -17,7 +17,7 @@ const Home = () => (
       </Link>
 
       <Link
-        to="/doctors"
+        to="/patients"
         className="cards d-flex flex-column justify-content-between btn btn-light border border-secondary my-5 mx-md-0 mx-auto"
         role="button"
       >
@@ -26,7 +26,7 @@ const Home = () => (
       </Link>
 
       <Link
-        to="/doctors"
+        to="/appointments"
         className="cards d-flex flex-column justify-content-between btn btn-light border border-secondary my-5 mx-md-0 mx-auto"
         role="button"
       >
