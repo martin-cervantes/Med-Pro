@@ -23,7 +23,7 @@ class Doctors extends React.Component {
   }
 
   deleteDoctor(id) {
-    const url = `/api/destroy/${id}`;
+    const url = `/api/doctors/${id}`;
     const token = document.querySelector('meta[name="csrf-token"]').content;
 
     fetch(url, {

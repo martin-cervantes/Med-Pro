@@ -38,7 +38,7 @@ class EditDoctor extends React.Component {
       }
     } = this.props;
 
-    const url = `/api/update/${id}`;
+    const url = `/api/doctors/${id}`;
 
     const {
       first_name,
@@ -91,7 +91,7 @@ class EditDoctor extends React.Component {
       }
     } = this.props;
 
-    const url = `/api/show/${id}`;
+    const url = `/api/doctors/${id}`;
 
     fetch(url)
       .then(response => {

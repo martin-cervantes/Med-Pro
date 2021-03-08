@@ -23,7 +23,7 @@ class Doctor extends React.Component {
       }
     } = this.props;
 
-    const url = `/api/show/${id}`;
+    const url = `/api/doctors/${id}`;
 
     fetch(url)
       .then(response => {
@@ -49,7 +49,7 @@ class Doctor extends React.Component {
         params: { id }
       }
     } = this.props;
-    const url = `/api/destroy/${id}`;
+    const url = `/api/doctors/${id}`;
     const token = document.querySelector('meta[name="csrf-token"]').content;
 
     fetch(url, {
