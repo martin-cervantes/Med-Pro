@@ -42,6 +42,6 @@ class Api::PatientsController < ApplicationController
   end
 
   def patient_params
-    params.permit(:fist_name, :last_name, :email, :username, :password)
+    params.permit(:first_name, :last_name, :email, :username, :password)
   end
 end
