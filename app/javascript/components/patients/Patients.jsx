@@ -7,6 +7,8 @@ class Patients extends React.Component {
     this.state = {
       patients: []
     };
+
+    window.scrollTo(0, 0);
   }
 
   componentDidMount() {

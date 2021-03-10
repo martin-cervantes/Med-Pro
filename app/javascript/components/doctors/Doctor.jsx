@@ -12,6 +12,7 @@ class Doctor extends React.Component {
       medical_speciality: "",
     };
 
+    window.scrollTo(0, 0);
     this.deleteDoctor = this.deleteDoctor.bind(this);
   }
 

@@ -11,6 +11,7 @@ class NewDoctor extends React.Component {
       medical_speciality: "Cardiothoracic surgery",
     };
 
+    window.scrollTo(0, 0);
     this.onChange = this.onChange.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
     this.stripHtmlEntities = this.stripHtmlEntities.bind(this);

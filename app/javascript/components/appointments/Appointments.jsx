@@ -7,6 +7,8 @@ class Appointments extends React.Component {
     this.state = {
       appointments: []
     };
+
+    window.scrollTo(0, 0);
   }
 
   componentDidMount() {

@@ -12,6 +12,7 @@ class Appointment extends React.Component {
       time: "",
     };
 
+    window.scrollTo(0, 0);
     this.deleteAppointment = this.deleteAppointment.bind(this);
   }
 

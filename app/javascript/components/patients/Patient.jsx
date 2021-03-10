@@ -11,6 +11,7 @@ class Patient extends React.Component {
       email: "",
     };
 
+    window.scrollTo(0, 0);
     this.deletePatient = this.deletePatient.bind(this);
   }
 
