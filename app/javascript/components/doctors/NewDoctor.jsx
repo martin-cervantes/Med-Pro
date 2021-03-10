@@ -9,9 +9,6 @@ class NewDoctor extends React.Component {
       last_name: "",
       email: "",
       medical_speciality: "Cardiothoracic surgery",
-      username: "",
-      password: "",
-      confirm_password: ""
     };
 
     this.onChange = this.onChange.bind(this);
@@ -37,9 +34,6 @@ class NewDoctor extends React.Component {
       last_name,
       email,
       medical_speciality,
-      username,
-      password,
-      confirm_password,
     } = this.state;
 
     if (first_name.length == 0 || last_name.length == 0 || email.length == 0 || username.length == 0 || password.length == 0 || confirm_password.length == 0)
@@ -53,8 +47,6 @@ class NewDoctor extends React.Component {
       last_name,
       email,
       medical_speciality,
-      username,
-      password,
     };
 
     const token = document.querySelector('meta[name="csrf-token"]').content;
@@ -147,42 +139,6 @@ class NewDoctor extends React.Component {
                   type="email"
                   name="email"
                   id="email"
-                  className="form-control"
-                  required
-                  onChange={this.onChange}
-                />
-              </div>
-
-              <div className="form-group">
-                <label htmlFor="username">Username</label>
-                <input
-                  type="text"
-                  name="username"
-                  id="username"
-                  className="form-control"
-                  required
-                  onChange={this.onChange}
-                />
-              </div>
-
-              <div className="form-group">
-                <label htmlFor="password">Password</label>
-                <input
-                  type="password"
-                  name="password"
-                  id="password"
-                  className="form-control"
-                  required
-                  onChange={this.onChange}
-                />
-              </div>
-
-              <div className="form-group">
-                <label htmlFor="confirm_password">Confirm password</label>
-                <input
-                  type="password"
-                  name="confirm_password"
-                  id="confirm_password"
                   className="form-control"
                   required
                   onChange={this.onChange}

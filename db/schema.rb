@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_03_005628) do
+ActiveRecord::Schema.define(version: 2021_03_10_173224) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,9 +19,9 @@ ActiveRecord::Schema.define(version: 2021_03_03_005628) do
     t.bigint "doctor_id", null: false
     t.bigint "patient_id", null: false
     t.date "date", null: false
-    t.time "time", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "time"
     t.index ["doctor_id"], name: "index_appointments_on_doctor_id"
     t.index ["patient_id"], name: "index_appointments_on_patient_id"
   end
@@ -31,8 +31,6 @@ ActiveRecord::Schema.define(version: 2021_03_03_005628) do
     t.string "last_name", default: "Doe", null: false
     t.string "email", default: "john_doe@hotcakes.com", null: false
     t.string "medical_speciality", default: "General surgery", null: false
-    t.string "username", default: "john_doe", null: false
-    t.string "password", default: "john_doe123", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -41,8 +39,6 @@ ActiveRecord::Schema.define(version: 2021_03_03_005628) do
     t.string "first_name", default: "John", null: false
     t.string "last_name", default: "Doe", null: false
     t.string "email", default: "john_doe@hotcakes.com", null: false
-    t.string "username", default: "john_doe", null: false
-    t.string "password", default: "john_doe123", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

@@ -42,6 +42,6 @@ class Api::DoctorsController < ApplicationController
   end
 
   def doctor_params
-    params.permit(:first_name, :last_name, :email, :medical_speciality, :username, :password)
+    params.permit(:first_name, :last_name, :email, :medical_speciality)
   end
 end

@@ -9,9 +9,6 @@ class EditPatient extends React.Component {
       first_name: "",
       last_name: "",
       email: "",
-      username: "",
-      password: "",
-      confirm_password: ""
     };
 
     this.onChange = this.onChange.bind(this);
@@ -43,23 +40,15 @@ class EditPatient extends React.Component {
       first_name,
       last_name,
       email,
-      username,
-      password,
-      confirm_password,
     } = this.state;
 
-    if (first_name.length == 0 || last_name.length == 0 || email.length == 0 || username.length == 0 || password.length == 0 || confirm_password.length == 0)
-      return;
-
-    if (password !== confirm_password)
+    if (first_name.length == 0 || last_name.length == 0 || email.length == 0)
       return;
 
     const body = {
       first_name,
       last_name,
       email,
-      username,
-      password,
     };
 
     const token = document.querySelector('meta[name="csrf-token"]').content;
@@ -102,9 +91,6 @@ class EditPatient extends React.Component {
         first_name: response.first_name,
         last_name: response.last_name,
         email: response.email,
-        username: response.username,
-        password: response.password,
-        confirm_password: response.password,
       }))
       .catch(() => this.props.history.push("/"));
   }
@@ -114,9 +100,6 @@ class EditPatient extends React.Component {
       first_name,
       last_name,
       email,
-      username,
-      password,
-      confirm_password,
     } = this.state;
 
     return (
@@ -161,45 +144,6 @@ class EditPatient extends React.Component {
                   id="email"
                   className="form-control"
                   value={email}
-                  required
-                  onChange={this.onChange}
-                />
-              </div>
-
-              <div className="form-group">
-                <label htmlFor="username">Username</label>
-                <input
-                  type="text"
-                  name="username"
-                  id="username"
-                  className="form-control"
-                  value={username}
-                  required
-                  onChange={this.onChange}
-                />
-              </div>
-
-              <div className="form-group">
-                <label htmlFor="password">Password</label>
-                <input
-                  type="password"
-                  name="password"
-                  id="password"
-                  className="form-control"
-                  value={password}
-                  required
-                  onChange={this.onChange}
-                />
-              </div>
-
-              <div className="form-group">
-                <label htmlFor="confirm_password">Confirm password</label>
-                <input
-                  type="password"
-                  name="confirm_password"
-                  id="confirm_password"
-                  className="form-control"
-                  value={confirm_password}
                   required
                   onChange={this.onChange}
                 />

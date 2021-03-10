@@ -77,7 +77,7 @@ class NewAppointment extends React.Component {
               <div className="form-group">
                 <label htmlFor="doctor_id">Doctor</label>
                 <input
-                  type="text"
+                  type="number"
                   name="doctor_id"
                   id="doctor_id"
                   className="form-control"
@@ -89,7 +89,7 @@ class NewAppointment extends React.Component {
               <div className="form-group">
                 <label htmlFor="patient_id">Patient</label>
                 <input
-                  type="text"
+                  type="number"
                   name="patient_id"
                   id="patient_id"
                   className="form-control"

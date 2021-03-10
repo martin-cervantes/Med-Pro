@@ -9,7 +9,6 @@ class Patient extends React.Component {
       first_name: "",
       last_name: "",
       email: "",
-      username: "",
     };
 
     this.deletePatient = this.deletePatient.bind(this);
@@ -36,7 +35,6 @@ class Patient extends React.Component {
         first_name: response.first_name,
         last_name: response.last_name,
         email: response.email,
-        username: response.username,
       }))
       .catch(() => this.props.history.push("/"));
   }
@@ -73,7 +71,6 @@ class Patient extends React.Component {
       first_name,
       last_name,
       email,
-      username,
     } = this.state;
 
     return (
@@ -88,12 +85,6 @@ class Patient extends React.Component {
           <div className="row">
             <div className="col-sm-12 col-lg-5">
               <h5 className="mb-2"><span className="font-weight-bold font-italic">Email:</span> {email}</h5>
-            </div>
-          </div>
-
-          <div className="row">
-            <div className="col-sm-12 col-lg-5">
-              <h5 className="mb-2"><span className="font-weight-bold font-italic">Username:</span> {username}</h5>
             </div>
           </div>
 

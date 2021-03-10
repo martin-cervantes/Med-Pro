@@ -10,7 +10,6 @@ class Doctor extends React.Component {
       last_name: "",
       email: "",
       medical_speciality: "",
-      username: "",
     };
 
     this.deleteDoctor = this.deleteDoctor.bind(this);
@@ -38,7 +37,6 @@ class Doctor extends React.Component {
         last_name: response.last_name,
         email: response.email,
         medical_speciality: response.medical_speciality,
-        username: response.username,
       }))
       .catch(() => this.props.history.push("/"));
   }
@@ -76,7 +74,6 @@ class Doctor extends React.Component {
       last_name,
       email,
       medical_speciality,
-      username,
     } = this.state;
 
     return (
@@ -97,12 +94,6 @@ class Doctor extends React.Component {
           <div className="row">
             <div className="col-sm-12 col-lg-5">
               <h5 className="mb-2"><span className="font-weight-bold font-italic">Medical speciality:</span> {medical_speciality}</h5>
-            </div>
-          </div>
-
-          <div className="row">
-            <div className="col-sm-12 col-lg-5">
-              <h5 className="mb-2"><span className="font-weight-bold font-italic">Username:</span> {username}</h5>
             </div>
           </div>
 
