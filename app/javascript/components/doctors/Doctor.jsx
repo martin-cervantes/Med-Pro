@@ -78,7 +78,7 @@ class Doctor extends React.Component {
     } = this.state;
 
     return (
-      <div className="">
+      <section className="">
         <div className="container py-5">
           <div className="row">
             <div className="col-sm-12 col-lg-5">
@@ -114,7 +114,7 @@ class Doctor extends React.Component {
             Back to doctors
           </Link>
         </div>
-      </div>
+      </section>
     );
   }
 }
