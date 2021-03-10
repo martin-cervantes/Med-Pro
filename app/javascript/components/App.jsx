@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import Home from "./Home";
@@ -20,29 +20,37 @@ import Appointment from "./appointments/Appointment";
 import NewAppointment from "./appointments/NewAppointment";
 import EditAppointment from "./appointments/EditAppointment";
 
-const App = props => (
-  <Router>
-    <Header />
-    <Switch>
-      <Route path="/" exact component={Home} />
+const App = props => {
+  const [active, setActive] = useState('home');
 
-      <Route path="/doctors" exact component={Doctors} />
-      <Route path="/doctor/:id" exact component={Doctor} />
-      <Route path="/new_doctor" exact component={NewDoctor} />
-      <Route path="/doctor/:id/edit" exact component={EditDoctor} />
+  const changeActive = active => {
+    setActive(active);
+  };
 
-      <Route path="/patients" exact component={Patients} />
-      <Route path="/patient/:id" exact component={Patient} />
-      <Route path="/new_patient" exact component={NewPatient} />
-      <Route path="/patient/:id/edit" exact component={EditPatient} />
+  return (
+    <Router>
+      <Header active={active} changeActive={changeActive} />
+      <Switch>
+        <Route path="/" exact component={() => <Home changeActive={changeActive} />} />
 
-      <Route path="/appointments" exact component={Appointments} />
-      <Route path="/appointment/:id" exact component={Appointment} />
-      <Route path="/new_appointment" exact component={NewAppointment} />
-      <Route path="/appointment/:id/edit" exact component={EditAppointment} />
-    </Switch>
-    <Footer />
-  </Router>
-);
+        <Route path="/doctors" exact component={Doctors} />
+        <Route path="/doctor/:id" exact component={Doctor} />
+        <Route path="/new_doctor" exact component={NewDoctor} />
+        <Route path="/doctor/:id/edit" exact component={EditDoctor} />
+
+        <Route path="/patients" exact component={Patients} />
+        <Route path="/patient/:id" exact component={Patient} />
+        <Route path="/new_patient" exact component={NewPatient} />
+        <Route path="/patient/:id/edit" exact component={EditPatient} />
+
+        <Route path="/appointments" exact component={Appointments} />
+        <Route path="/appointment/:id" exact component={Appointment} />
+        <Route path="/new_appointment" exact component={NewAppointment} />
+        <Route path="/appointment/:id/edit" exact component={EditAppointment} />
+      </Switch>
+      <Footer />
+    </Router>
+  );
+}
 
 export default App;

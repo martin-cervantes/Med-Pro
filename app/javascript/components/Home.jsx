@@ -4,13 +4,14 @@ import doctors from '../../assets/images/doctor.png';
 import patients from '../../assets/images/patient.png';
 import appointments from '../../assets/images/appointment.png';
 
-const Home = () => (
+const Home = ({ changeActive }) => (
   <section>
     <div className="d-flex flex-md-row flex-column justify-content-around">
       <Link
         to="/doctors"
         className="cards d-flex flex-column justify-content-between btn btn-light border border-secondary my-5 mx-md-0 mx-auto"
         role="button"
+        onClick={() => changeActive('doctors')}
       >
         <img src={doctors} alt="Doctors" title="Doctors" />
         <span className="title">Doctors</span>
@@ -20,6 +21,7 @@ const Home = () => (
         to="/patients"
         className="cards d-flex flex-column justify-content-between btn btn-light border border-secondary my-5 mx-md-0 mx-auto"
         role="button"
+        onClick={() => changeActive('patients')}
       >
         <img src={patients} alt="Patients" title="Patients" />
         <span className="title">Patients</span>
@@ -29,6 +31,7 @@ const Home = () => (
         to="/appointments"
         className="cards d-flex flex-column justify-content-between btn btn-light border border-secondary my-5 mx-md-0 mx-auto"
         role="button"
+        onClick={() => changeActive('appointments')}
       >
         <img src={appointments} alt="Appointments" title="Appointments" />
         <span className="title">Appointments</span>
